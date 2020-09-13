@@ -5,6 +5,8 @@ import "./Rates.css"
 
 class Rates extends Component {
 
+
+
     state = {
         options: {
             chart: {id: "basic-bar"},
@@ -19,8 +21,6 @@ class Rates extends Component {
             }
         ]
     };
-
-
 
     componentDidMount() {
         function createDate(date) {
@@ -46,39 +46,17 @@ class Rates extends Component {
                     return rate.Cur_OfficialRate
                 });
                 newSeries.push({data, name: s.name})
-            })
-
-            const data1 = this.props.rates.map(rate => {
-                return rate.Date
-
             });
-
-            // const result = Object.entries(this.state.options)
-            //
-            // const data1 = this.props.rates.map(rate => {
-            //     return rate.Date
-            // });
-            //
-            // result[1] = []
-            //
-            // console.log(result)
-
 
             this.setState((prevState) => {
                 return {
                     series: newSeries,
-
-
                 }
             })
         }
     }
 
-
     render() {
-        console.log(this.props)
-        console.log(this.state)
-
         return (
             <div className="app">
                 <div className="row">
@@ -102,29 +80,3 @@ class Rates extends Component {
 export default Rates;
 
 
-// let Rates = ({rates}) => {
-//     console.log(rates)
-//
-//
-//     // rates.forEach(rate => graph.series[0].data.push(rate.Cur_OfficialRate));
-//     // rates.forEach(rate => graph.options.xaxis.categories.push(rate.Date));
-//     console.log(graph)
-//     return (
-//         <div className="app">
-//             <div className="row">
-//                 <div className="mixed-chart">
-//                     <Chart
-//                         options={graph.options}
-//                         series={graph.series}
-//                         type="bar"
-//                         width="500"
-//                     />
-//                 </div>
-//             </div>
-//         </div>
-//
-//     );
-// };
-//
-//
-// export default Rates;

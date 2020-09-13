@@ -2,8 +2,6 @@ import React from 'react';
 import {Layout} from 'antd'
 
 import './App.css';
-import Rates from "./Conponenrs/Rates/Rates";
-import DropdownMenu from "./Conponenrs/Dropdown/Dropdown";
 import RatesContainer from "./Conponenrs/Rates/RatesContainer";
 
 const {Content} = Layout;

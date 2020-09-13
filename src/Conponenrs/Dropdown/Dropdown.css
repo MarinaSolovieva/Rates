@@ -4,15 +4,17 @@
     cursor: pointer;
 }
 
-
 .dropdown-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    outline: none;
 }
 
+.dropdown-item {
+    cursor: pointer;
+    list-style: none;
 
-
-
+}
 
 .ant-dropdown-link { font-size: 1.5em; }
